@@ -1,6 +1,6 @@
 # Serbian (cyrillic) translation of the Godot Engine editor
-# Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.
-# Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).
+# Copyright (c) 2007-2021 Juan Linietsky, Ariel Manzur.
+# Copyright (c) 2014-2021 Godot Engine contributors (cf. AUTHORS.md).
 # This file is distributed under the same license as the Godot source code.
 #
 # Александар Урошевић <nicecubedude@gmail.com>, 2017.
@@ -720,7 +720,7 @@ msgstr "Постави прелаз на:"
 #: editor/plugins/animation_player_editor_plugin.cpp
 #: editor/plugins/script_text_editor.cpp
 #: editor/plugins/sprite_frames_editor_plugin.cpp editor/property_editor.cpp
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
+#: editor/scene_tree_dock.cpp scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Copy"
 msgstr "Копирај"
 
@@ -1139,14 +1139,18 @@ msgstr "Власници:"
 
 #: editor/dependency_editor.cpp
 #, fuzzy
-msgid "Remove selected files from the project? (Can't be restored)"
+msgid ""
+"Remove selected files from the project? (no undo)\n"
+"You can find the removed files in the system trash to restore them."
 msgstr "Обриши одабране датотеке из пројекта? (НЕМА ОПОЗИВАЊА)"
 
 #: editor/dependency_editor.cpp
+#, fuzzy
 msgid ""
 "The files being removed are required by other resources in order for them to "
 "work.\n"
-"Remove them anyway? (no undo)"
+"Remove them anyway? (no undo)\n"
+"You can find the removed files in the system trash to restore them."
 msgstr ""
 "Жељене датотеке за брисање су потребне за рад других ресурса.\n"
 "Ипак их обриши? (НЕМА ОПОЗИВАЊА)"
@@ -1196,7 +1200,7 @@ msgstr "Преглед повезаних ресурса"
 
 #: editor/dependency_editor.cpp editor/editor_audio_buses.cpp
 #: editor/editor_file_dialog.cpp editor/editor_node.cpp
-#: editor/filesystem_dock.cpp editor/plugins/item_list_editor_plugin.cpp
+#: editor/plugins/item_list_editor_plugin.cpp
 #: editor/plugins/sprite_frames_editor_plugin.cpp editor/project_export.cpp
 #: editor/project_settings_editor.cpp editor/scene_tree_dock.cpp
 msgid "Delete"
@@ -2126,10 +2130,6 @@ msgstr "Преглед:"
 msgid "File:"
 msgstr "Датотека:"
 
-#: editor/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-msgid "Must use a valid extension."
-msgstr "Мора се користити важећа екстензија."
-
 #: editor/editor_file_system.cpp
 msgid "ScanSources"
 msgstr "Скенирање извора"
@@ -2528,19 +2528,25 @@ msgid "Error saving TileSet!"
 msgstr "Грешка при чувању TileSet!"
 
 #: editor/editor_node.cpp
-msgid "Error trying to save layout!"
-msgstr "Грешка при чувању распореда!"
+msgid ""
+"An error occurred while trying to save the editor layout.\n"
+"Make sure the editor's user data path is writable."
+msgstr ""
 
 #: editor/editor_node.cpp
-msgid "Default editor layout overridden."
-msgstr "Уобичајен распоред је преуређен."
+msgid ""
+"Default editor layout overridden.\n"
+"To restore the Default layout to its base settings, use the Delete Layout "
+"option and delete the Default layout."
+msgstr ""
 
 #: editor/editor_node.cpp
 msgid "Layout name not found!"
 msgstr "Име распореда није пронађен!"
 
 #: editor/editor_node.cpp
-msgid "Restored default layout to base settings."
+#, fuzzy
+msgid "Restored the Default layout to its base settings."
 msgstr "Постави подразумевани изглед на почетну вредност."
 
 #: editor/editor_node.cpp
@@ -2599,6 +2605,10 @@ msgid "There is no defined scene to run."
 msgstr "Не постоји дефинисана сцена за покретање."
 
 #: editor/editor_node.cpp
+msgid "Save scene before running..."
+msgstr ""
+
+#: editor/editor_node.cpp
 msgid "Could not start subprocess!"
 msgstr "Не могу покренути подпроцес!"
 
@@ -2644,18 +2654,6 @@ msgstr "За памћене сцене неопходан је корени но
 #: editor/editor_node.cpp
 msgid "Save Scene As..."
 msgstr "Сачувај сцену као..."
-
-#: editor/editor_node.cpp
-msgid "No"
-msgstr "Не"
-
-#: editor/editor_node.cpp
-msgid "Yes"
-msgstr "Да"
-
-#: editor/editor_node.cpp
-msgid "This scene has never been saved. Save before running?"
-msgstr "Ова сцена није сачувана. Сачувај пре покретања?"
 
 #: editor/editor_node.cpp editor/scene_tree_dock.cpp
 msgid "This operation can't be done without a scene."
@@ -2705,6 +2703,10 @@ msgid "Quit"
 msgstr "Изађи"
 
 #: editor/editor_node.cpp
+msgid "Yes"
+msgstr "Да"
+
+#: editor/editor_node.cpp
 msgid "Exit the editor?"
 msgstr "Изађи из уредника?"
 
@@ -2750,7 +2752,8 @@ msgid "Unable to enable addon plugin at: '%s' parsing of config failed."
 msgstr "Неуспех при прикључивању додатка због конфигурационе датотеке: '%s'."
 
 #: editor/editor_node.cpp
-msgid "Unable to find script field for addon plugin at: 'res://addons/%s'."
+#, fuzzy
+msgid "Unable to find script field for addon plugin at: '%s'."
 msgstr "Неуспех при налажењу поља за скриптицу у додатку „res://addons/%s“."
 
 #: editor/editor_node.cpp
@@ -3211,14 +3214,6 @@ msgid "Help"
 msgstr "Помоћ"
 
 #: editor/editor_node.cpp editor/plugins/script_editor_plugin.cpp
-#: editor/plugins/script_text_editor.cpp
-#: editor/plugins/shader_editor_plugin.cpp editor/plugins/text_editor.cpp
-#: editor/plugins/visual_shader_editor_plugin.cpp editor/project_manager.cpp
-#: editor/project_settings_editor.cpp editor/settings_config_dialog.cpp
-msgid "Search"
-msgstr "Тражи"
-
-#: editor/editor_node.cpp editor/plugins/script_editor_plugin.cpp
 #: editor/plugins/shader_editor_plugin.cpp
 msgid "Online Docs"
 msgstr "Онлајн документација"
@@ -3396,6 +3391,25 @@ msgstr "Споји са постојећим"
 #: editor/editor_node.cpp
 msgid "Open & Run a Script"
 msgstr "Отвори и покрени скриптицу"
+
+#: editor/editor_node.cpp
+#, fuzzy
+msgid ""
+"The following files are newer on disk.\n"
+"What action should be taken?"
+msgstr ""
+"Следеће датотеке су нове на диску.\n"
+"Која акција се треба предузети?:"
+
+#: editor/editor_node.cpp editor/plugins/script_editor_plugin.cpp
+#: editor/plugins/shader_editor_plugin.cpp
+msgid "Reload"
+msgstr "Освежи"
+
+#: editor/editor_node.cpp editor/plugins/script_editor_plugin.cpp
+#: editor/plugins/shader_editor_plugin.cpp
+msgid "Resave"
+msgstr "Поново сачувај"
 
 #: editor/editor_node.cpp
 msgid "New Inherited"
@@ -3629,7 +3643,7 @@ msgstr "Учини Јединственим"
 #: editor/plugins/script_text_editor.cpp
 #: editor/plugins/sprite_frames_editor_plugin.cpp
 #: editor/plugins/tile_map_editor_plugin.cpp editor/property_editor.cpp
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
+#: editor/scene_tree_dock.cpp scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Paste"
 msgstr "Налепи"
 
@@ -4011,6 +4025,16 @@ msgid "Name contains invalid characters."
 msgstr "Дато име садржи неважећа слова."
 
 #: editor/filesystem_dock.cpp
+msgid ""
+"The following files or folders conflict with items in the target location "
+"'%s':\n"
+"\n"
+"%s\n"
+"\n"
+"Do you wish to overwrite them?"
+msgstr ""
+
+#: editor/filesystem_dock.cpp
 msgid "Renaming file:"
 msgstr "Преименовање датотеке:"
 
@@ -4065,15 +4089,6 @@ msgstr "Измени зависности..."
 msgid "View Owners..."
 msgstr "Погледај власнике..."
 
-#: editor/filesystem_dock.cpp editor/plugins/animation_player_editor_plugin.cpp
-msgid "Rename..."
-msgstr "Преименуј..."
-
-#: editor/filesystem_dock.cpp
-#, fuzzy
-msgid "Duplicate..."
-msgstr "Дуплирај"
-
 #: editor/filesystem_dock.cpp
 msgid "Move To..."
 msgstr "Помери у..."
@@ -4106,11 +4121,18 @@ msgid "Collapse All"
 msgstr "Умањи све"
 
 #: editor/filesystem_dock.cpp
-#: editor/plugins/animation_tree_player_editor_plugin.cpp
-#: editor/project_manager.cpp editor/rename_dialog.cpp
-#: editor/scene_tree_dock.cpp
-msgid "Rename"
-msgstr "Преименуј"
+#, fuzzy
+msgid "Duplicate..."
+msgstr "Дуплирај"
+
+#: editor/filesystem_dock.cpp
+#, fuzzy
+msgid "Move to Trash"
+msgstr "Помери аутоматско учитавање"
+
+#: editor/filesystem_dock.cpp editor/plugins/animation_player_editor_plugin.cpp
+msgid "Rename..."
+msgstr "Преименуј..."
 
 #: editor/filesystem_dock.cpp
 #, fuzzy
@@ -4149,9 +4171,11 @@ msgid "Move"
 msgstr "Помери"
 
 #: editor/filesystem_dock.cpp
-#, fuzzy
-msgid "There is already file or folder with the same name in this location."
-msgstr "Датотека или директоријум са овим именом већ постоји."
+#: editor/plugins/animation_tree_player_editor_plugin.cpp
+#: editor/project_manager.cpp editor/rename_dialog.cpp
+#: editor/scene_tree_dock.cpp
+msgid "Rename"
+msgstr "Преименуј"
 
 #: editor/filesystem_dock.cpp
 #, fuzzy
@@ -4232,8 +4256,18 @@ msgstr "Чување..."
 
 #: editor/find_in_files.cpp
 #, fuzzy
-msgid "Search complete"
-msgstr "Потражи текст"
+msgid "%d match in %d file."
+msgstr "Нема подударања."
+
+#: editor/find_in_files.cpp
+#, fuzzy
+msgid "%d matches in %d file."
+msgstr "Нема подударања."
+
+#: editor/find_in_files.cpp
+#, fuzzy
+msgid "%d matches in %d files."
+msgstr "Нема подударања."
 
 #: editor/groups_editor.cpp
 msgid "Add to Group"
@@ -5458,7 +5492,8 @@ msgid "Got:"
 msgstr "Добијено:"
 
 #: editor/plugins/asset_library_editor_plugin.cpp
-msgid "Failed sha256 hash check"
+#, fuzzy
+msgid "Failed SHA-256 hash check"
 msgstr "Неуспела провера sha256 суме"
 
 #: editor/plugins/asset_library_editor_plugin.cpp
@@ -5611,8 +5646,7 @@ msgstr "Ресурси ЗИП датотека"
 #, fuzzy
 msgid ""
 "Can't determine a save path for lightmap images.\n"
-"Save your scene (for images to be saved in the same dir), or pick a save "
-"path from the BakedLightmap properties."
+"Save your scene and try again."
 msgstr ""
 "Неуспело одређивање путање памћења за слике МапеСенчења.\n"
 "Упамти сцену (за слике да буду сачуване у истом директоријуму), или одабери "
@@ -5634,9 +5668,29 @@ msgstr ""
 "Неуспешно креирање слике МапеСенчења, провери да ли могуће уписивање путање."
 
 #: editor/plugins/baked_lightmap_editor_plugin.cpp
+msgid "Failed determining lightmap size. Maximum lightmap size too small?"
+msgstr ""
+
+#: editor/plugins/baked_lightmap_editor_plugin.cpp
+msgid ""
+"Some mesh is invalid. Make sure the UV2 channel values are contained within "
+"the [0.0,1.0] square region."
+msgstr ""
+
+#: editor/plugins/baked_lightmap_editor_plugin.cpp
+msgid ""
+"Godot editor was built without ray tracing support, lightmaps can't be baked."
+msgstr ""
+
+#: editor/plugins/baked_lightmap_editor_plugin.cpp
 #, fuzzy
 msgid "Bake Lightmaps"
 msgstr "Изпеци МапеСенчења"
+
+#: editor/plugins/baked_lightmap_editor_plugin.cpp
+#, fuzzy
+msgid "Select lightmap bake file:"
+msgstr "Одабери шаблонску датотеку"
 
 #: editor/plugins/camera_editor_plugin.cpp
 #: editor/plugins/spatial_editor_plugin.cpp
@@ -6848,6 +6902,11 @@ msgid "Can only set point into a ParticlesMaterial process material"
 msgstr "Тачка се само може поставити у ParticlesMaterial процесни материјал"
 
 #: editor/plugins/particles_2d_editor_plugin.cpp
+#, fuzzy
+msgid "Convert to CPUParticles2D"
+msgstr "Претвори у CPU честице"
+
+#: editor/plugins/particles_2d_editor_plugin.cpp
 #: editor/plugins/particles_editor_plugin.cpp
 msgid "Generation Time (sec):"
 msgstr "Време генерисања (сек.):"
@@ -6912,10 +6971,6 @@ msgstr "Генерисање осног поравнаног граничнио�
 #: editor/plugins/particles_editor_plugin.cpp
 msgid "Generate Visibility AABB"
 msgstr "Генериши осно поравнан гранични оквир (AABB) видљивости"
-
-#: editor/plugins/particles_editor_plugin.cpp
-msgid "Generate AABB"
-msgstr "Генериши осно поравнан гранични оквир (AABB)"
 
 #: editor/plugins/path_2d_editor_plugin.cpp
 msgid "Remove Point from Curve"
@@ -7577,6 +7632,14 @@ msgstr "Затвори документацију"
 msgid "Run"
 msgstr "Покрени"
 
+#: editor/plugins/script_editor_plugin.cpp
+#: editor/plugins/script_text_editor.cpp
+#: editor/plugins/shader_editor_plugin.cpp editor/plugins/text_editor.cpp
+#: editor/plugins/visual_shader_editor_plugin.cpp editor/project_manager.cpp
+#: editor/project_settings_editor.cpp editor/settings_config_dialog.cpp
+msgid "Search"
+msgstr "Тражи"
+
 #: editor/plugins/script_editor_plugin.cpp editor/script_editor_debugger.cpp
 msgid "Step Into"
 msgstr "Корак у"
@@ -7631,16 +7694,6 @@ msgid ""
 msgstr ""
 "Следеће датотеке су нове на диску.\n"
 "Која акција се треба предузети?:"
-
-#: editor/plugins/script_editor_plugin.cpp
-#: editor/plugins/shader_editor_plugin.cpp
-msgid "Reload"
-msgstr "Освежи"
-
-#: editor/plugins/script_editor_plugin.cpp
-#: editor/plugins/shader_editor_plugin.cpp
-msgid "Resave"
-msgstr "Поново сачувај"
 
 #: editor/plugins/script_editor_plugin.cpp editor/script_editor_debugger.cpp
 msgid "Debugger"
@@ -7749,8 +7802,8 @@ msgstr "Тачке прекида"
 msgid "Go To"
 msgstr "Иди На"
 
-#: editor/plugins/script_text_editor.cpp scene/gui/line_edit.cpp
-#: scene/gui/text_edit.cpp
+#: editor/plugins/script_text_editor.cpp editor/scene_tree_dock.cpp
+#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 msgid "Cut"
 msgstr "Исеци"
 
@@ -7997,6 +8050,11 @@ msgstr "Лево-Десно"
 #, fuzzy
 msgid "Yaw"
 msgstr "Горе-Доле"
+
+#: editor/plugins/spatial_editor_plugin.cpp
+#, fuzzy
+msgid "Size"
+msgstr "Величина:"
 
 #: editor/plugins/spatial_editor_plugin.cpp
 msgid "Objects Drawn"
@@ -9144,8 +9202,23 @@ msgstr "Направи нов"
 
 #: editor/plugins/tile_set_editor_plugin.cpp
 #, fuzzy
+msgid "New Rectangle"
+msgstr "Цртање правоугаоником"
+
+#: editor/plugins/tile_set_editor_plugin.cpp
+#, fuzzy
 msgid "Create a new polygon."
 msgstr "Направи нови полигон од почетка."
+
+#: editor/plugins/tile_set_editor_plugin.cpp
+#, fuzzy
+msgid "New Polygon"
+msgstr "Помери полигон"
+
+#: editor/plugins/tile_set_editor_plugin.cpp
+#, fuzzy
+msgid "Delete Selected Shape"
+msgstr "Обриши одабрани Кључ/еве"
 
 #: editor/plugins/tile_set_editor_plugin.cpp
 #, fuzzy
@@ -9387,11 +9460,6 @@ msgstr "Грешка"
 
 #: editor/plugins/version_control_editor_plugin.cpp
 #, fuzzy
-msgid "No commit message was provided"
-msgstr "Име није дато"
-
-#: editor/plugins/version_control_editor_plugin.cpp
-#, fuzzy
 msgid "No files added to stage"
 msgstr "Ни један фајл није додат на позорницу"
 
@@ -9459,11 +9527,6 @@ msgstr "Увећај одабрано"
 #, fuzzy
 msgid "Stage All"
 msgstr "Сачувај све"
-
-#: editor/plugins/version_control_editor_plugin.cpp
-#, fuzzy
-msgid "Add a commit message"
-msgstr "Додај предајну поруку"
 
 #: editor/plugins/version_control_editor_plugin.cpp
 #, fuzzy
@@ -10895,6 +10958,10 @@ msgid "OpenGL ES 3.0"
 msgstr "OpenGL ES 3.0"
 
 #: editor/project_manager.cpp
+msgid "Not supported by your GPU drivers."
+msgstr ""
+
+#: editor/project_manager.cpp
 #, fuzzy
 msgid ""
 "Higher visual quality\n"
@@ -11088,6 +11155,11 @@ msgstr "Менаџер пројекта"
 #, fuzzy
 msgid "Projects"
 msgstr "Пројекти"
+
+#: editor/project_manager.cpp
+#, fuzzy
+msgid "Loading, please wait..."
+msgstr "Прихватам одредишта, молим сачекајте..."
 
 #: editor/project_manager.cpp
 #, fuzzy
@@ -11851,6 +11923,16 @@ msgstr "Инстанца Сцена Дете"
 
 #: editor/scene_tree_dock.cpp
 #, fuzzy
+msgid "Can't paste root node into the same scene."
+msgstr "Немогуће оперисати на чвору из стране сцене!"
+
+#: editor/scene_tree_dock.cpp
+#, fuzzy
+msgid "Paste Node(s)"
+msgstr "Налепи Чворове"
+
+#: editor/scene_tree_dock.cpp
+#, fuzzy
 msgid "Detach Script"
 msgstr "Припој Скрипту"
 
@@ -12003,6 +12085,11 @@ msgstr "Немогуће оперисати на чворовима од кој�
 #, fuzzy
 msgid "Attach Script"
 msgstr "Припој Скрипту"
+
+#: editor/scene_tree_dock.cpp
+#, fuzzy
+msgid "Cut Node(s)"
+msgstr "Направи чвор"
 
 #: editor/scene_tree_dock.cpp
 #, fuzzy
@@ -12990,6 +13077,39 @@ msgstr "Пробери мреже"
 msgid "Give a MeshLibrary resource to this GridMap to use its meshes."
 msgstr "Дај БиблиотециМрежа ресурс ове МапеМреже да користи њене мреже."
 
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+msgid "Begin Bake"
+msgstr ""
+
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+msgid "Preparing data structures"
+msgstr ""
+
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+#, fuzzy
+msgid "Generate buffers"
+msgstr "Генериши осно поравнан гранични оквир (AABB)"
+
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+#, fuzzy
+msgid "Direct lighting"
+msgstr "Смерови"
+
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+#, fuzzy
+msgid "Indirect lighting"
+msgstr "Увучи десно"
+
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+#, fuzzy
+msgid "Post processing"
+msgstr "Након-Обраде"
+
+#: modules/lightmapper_cpu/lightmapper_cpu.cpp
+#, fuzzy
+msgid "Plotting lightmaps"
+msgstr "Скована Светла:"
+
 #: modules/mono/csharp_script.cpp
 #, fuzzy
 msgid "Class name can't be a reserved keyword"
@@ -13554,14 +13674,17 @@ msgid "Select device from the list"
 msgstr "Одабери уређај са листе"
 
 #: platform/android/export/export.cpp
-#, fuzzy
-msgid "ADB executable not configured in the Editor Settings."
-msgstr "ADB извршна датотека није подешена у Подешавањима Уредника."
+msgid "Unable to find the 'apksigner' tool."
+msgstr ""
 
 #: platform/android/export/export.cpp
 #, fuzzy
-msgid "OpenJDK jarsigner not configured in the Editor Settings."
-msgstr "OpenJDK jar потписник није подешен у Подешавањима Уредника."
+msgid ""
+"Android build template not installed in the project. Install it from the "
+"Project menu."
+msgstr ""
+"Android нацрт изградње није инсталиран у пројекат. Инсталирај га из Пројекат "
+"менија."
 
 #: platform/android/export/export.cpp
 #, fuzzy
@@ -13579,25 +13702,37 @@ msgstr ""
 
 #: platform/android/export/export.cpp
 #, fuzzy
-msgid "Custom build requires a valid Android SDK path in Editor Settings."
-msgstr ""
-"Произвољна изградња захтева важећу путању до Android SDK у Подешавањима "
-"Уредника."
-
-#: platform/android/export/export.cpp
-#, fuzzy
-msgid "Invalid Android SDK path for custom build in Editor Settings."
+msgid "A valid Android SDK path is required in Editor Settings."
 msgstr ""
 "Неважећа Android SDK путања за произвољну изградњу у Подешавањима Уредника."
 
 #: platform/android/export/export.cpp
 #, fuzzy
-msgid ""
-"Android build template not installed in the project. Install it from the "
-"Project menu."
+msgid "Invalid Android SDK path in Editor Settings."
 msgstr ""
-"Android нацрт изградње није инсталиран у пројекат. Инсталирај га из Пројекат "
-"менија."
+"Неважећа Android SDK путања за произвољну изградњу у Подешавањима Уредника."
+
+#: platform/android/export/export.cpp
+msgid "Missing 'platform-tools' directory!"
+msgstr ""
+
+#: platform/android/export/export.cpp
+msgid "Unable to find Android SDK platform-tools' adb command."
+msgstr ""
+
+#: platform/android/export/export.cpp
+#, fuzzy
+msgid "Please check in the Android SDK directory specified in Editor Settings."
+msgstr ""
+"Неважећа Android SDK путања за произвољну изградњу у Подешавањима Уредника."
+
+#: platform/android/export/export.cpp
+msgid "Missing 'build-tools' directory!"
+msgstr ""
+
+#: platform/android/export/export.cpp
+msgid "Unable to find Android SDK build-tools' apksigner command."
+msgstr ""
 
 #: platform/android/export/export.cpp
 #, fuzzy
@@ -13913,6 +14048,26 @@ msgstr ""
 "ПроцесорЧестице2Д анимација захтева коришћење ПлатноПредметМатеријала са "
 "омогућеном \"Анимациом Честица\"."
 
+#: scene/2d/joints_2d.cpp
+msgid "Node A and Node B must be PhysicsBody2Ds"
+msgstr ""
+
+#: scene/2d/joints_2d.cpp
+msgid "Node A must be a PhysicsBody2D"
+msgstr ""
+
+#: scene/2d/joints_2d.cpp
+msgid "Node B must be a PhysicsBody2D"
+msgstr ""
+
+#: scene/2d/joints_2d.cpp
+msgid "Joint is not connected to two PhysicsBody2Ds"
+msgstr ""
+
+#: scene/2d/joints_2d.cpp
+msgid "Node A and Node B must be different PhysicsBody2Ds"
+msgstr ""
+
 #: scene/2d/light_2d.cpp
 #, fuzzy
 msgid ""
@@ -14086,34 +14241,33 @@ msgid "ARVROrigin requires an ARVRCamera child node."
 msgstr "ARVROrigin захтева ARVRCamera дете чвор."
 
 #: scene/3d/baked_lightmap.cpp
-#, fuzzy
-msgid "%d%%"
-msgstr "%d%%"
+msgid "Finding meshes and lights"
+msgstr ""
 
 #: scene/3d/baked_lightmap.cpp
 #, fuzzy
-msgid "(Time Left: %d:%02d s)"
-msgstr "(Време преостало: %d:%02d с)"
+msgid "Preparing geometry (%d/%d)"
+msgstr "Анализирање геометрије..."
 
 #: scene/3d/baked_lightmap.cpp
 #, fuzzy
-msgid "Plotting Meshes: "
-msgstr "Сковане Мреже:"
+msgid "Preparing environment"
+msgstr "Прикажи околину"
 
 #: scene/3d/baked_lightmap.cpp
 #, fuzzy
-msgid "Plotting Lights:"
-msgstr "Скована Светла:"
-
-#: scene/3d/baked_lightmap.cpp scene/3d/gi_probe.cpp
-#, fuzzy
-msgid "Finishing Plot"
-msgstr "Завршни Ков"
+msgid "Generating capture"
+msgstr "Генерисање осног поравнаног граничниог оквира (AABB)"
 
 #: scene/3d/baked_lightmap.cpp
 #, fuzzy
-msgid "Lighting Meshes: "
-msgstr "Светлосне Мреже:"
+msgid "Saving lightmaps"
+msgstr "Генерисање осног поравнаног граничниог оквира (AABB)"
+
+#: scene/3d/baked_lightmap.cpp
+#, fuzzy
+msgid "Done"
+msgstr "Готово!"
 
 #: scene/3d/collision_object.cpp
 #, fuzzy
@@ -14200,6 +14354,11 @@ msgstr "Сковане Мреже"
 
 #: scene/3d/gi_probe.cpp
 #, fuzzy
+msgid "Finishing Plot"
+msgstr "Завршни Ков"
+
+#: scene/3d/gi_probe.cpp
+#, fuzzy
 msgid ""
 "GIProbes are not supported by the GLES2 video driver.\n"
 "Use a BakedLightmap instead."
@@ -14280,6 +14439,26 @@ msgid ""
 msgstr ""
 "Промена величине у ТврдомТелу (у карактеру или трвдом моду) ће бити "
 "преписана од стране физичког мотора у раду."
+
+#: scene/3d/physics_joint.cpp
+msgid "Node A and Node B must be PhysicsBodies"
+msgstr ""
+
+#: scene/3d/physics_joint.cpp
+msgid "Node A must be a PhysicsBody"
+msgstr ""
+
+#: scene/3d/physics_joint.cpp
+msgid "Node B must be a PhysicsBody"
+msgstr ""
+
+#: scene/3d/physics_joint.cpp
+msgid "Joint is not connected to any PhysicsBodies"
+msgstr ""
+
+#: scene/3d/physics_joint.cpp
+msgid "Node A and Node B must be different PhysicsBodies"
+msgstr ""
 
 #: scene/3d/remote_transform.cpp
 #, fuzzy
@@ -14464,6 +14643,15 @@ msgstr "Узбуна!"
 msgid "Please Confirm..."
 msgstr "Молимо Потврди..."
 
+#: scene/gui/file_dialog.cpp
+msgid "Must use a valid extension."
+msgstr "Мора се користити важећа екстензија."
+
+#: scene/gui/graph_edit.cpp
+#, fuzzy
+msgid "Enable grid minimap."
+msgstr "Укључи лепљење"
+
 #: scene/gui/popup.cpp
 #, fuzzy
 msgid ""
@@ -14525,6 +14713,12 @@ msgid "Viewport size must be greater than 0 to render anything."
 msgstr "Величина Viewport-а мора бити већа од 0 да би се нешто исцртало."
 
 #: scene/resources/visual_shader_nodes.cpp
+msgid ""
+"The sampler port is connected but not used. Consider changing the source to "
+"'SamplerPort'."
+msgstr ""
+
+#: scene/resources/visual_shader_nodes.cpp
 #, fuzzy
 msgid "Invalid source for preview."
 msgstr "Неважећи извор за преглед."
@@ -14558,6 +14752,64 @@ msgstr "Варијације могу само бити одређене у фу
 #, fuzzy
 msgid "Constants cannot be modified."
 msgstr "Константе није могуће мењати."
+
+#~ msgid "No"
+#~ msgstr "Не"
+
+#~ msgid "This scene has never been saved. Save before running?"
+#~ msgstr "Ова сцена није сачувана. Сачувај пре покретања?"
+
+#, fuzzy
+#~ msgid "ADB executable not configured in the Editor Settings."
+#~ msgstr "ADB извршна датотека није подешена у Подешавањима Уредника."
+
+#, fuzzy
+#~ msgid "OpenJDK jarsigner not configured in the Editor Settings."
+#~ msgstr "OpenJDK jar потписник није подешен у Подешавањима Уредника."
+
+#, fuzzy
+#~ msgid "Custom build requires a valid Android SDK path in Editor Settings."
+#~ msgstr ""
+#~ "Произвољна изградња захтева важећу путању до Android SDK у Подешавањима "
+#~ "Уредника."
+
+#, fuzzy
+#~ msgid "%d%%"
+#~ msgstr "%d%%"
+
+#, fuzzy
+#~ msgid "(Time Left: %d:%02d s)"
+#~ msgstr "(Време преостало: %d:%02d с)"
+
+#, fuzzy
+#~ msgid "Plotting Meshes: "
+#~ msgstr "Сковане Мреже:"
+
+#, fuzzy
+#~ msgid "Lighting Meshes: "
+#~ msgstr "Светлосне Мреже:"
+
+#, fuzzy
+#~ msgid "Search complete"
+#~ msgstr "Потражи текст"
+
+#, fuzzy
+#~ msgid "No commit message was provided"
+#~ msgstr "Име није дато"
+
+#, fuzzy
+#~ msgid "Add a commit message"
+#~ msgstr "Додај предајну поруку"
+
+#, fuzzy
+#~ msgid "There is already file or folder with the same name in this location."
+#~ msgstr "Датотека или директоријум са овим именом већ постоји."
+
+#~ msgid "Error trying to save layout!"
+#~ msgstr "Грешка при чувању распореда!"
+
+#~ msgid "Default editor layout overridden."
+#~ msgstr "Уобичајен распоред је преуређен."
 
 #, fuzzy
 #~ msgid "Move pivot"
@@ -14813,10 +15065,6 @@ msgstr "Константе није могуће мењати."
 #~ msgstr "Грешка при учитавању ресурса."
 
 #, fuzzy
-#~ msgid "Done"
-#~ msgstr "Готово!"
-
-#, fuzzy
 #~ msgid "Failed to create C# project."
 #~ msgstr "Грешка при учитавању ресурса."
 
@@ -14873,10 +15121,6 @@ msgstr "Константе није могуће мењати."
 #, fuzzy
 #~ msgid "CheckBox Radio2"
 #~ msgstr "CheckBox Radio2"
-
-#, fuzzy
-#~ msgid "Custom Node"
-#~ msgstr "Направи чвор"
 
 #, fuzzy
 #~ msgid "Snap (s): "
